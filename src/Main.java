@@ -43,15 +43,18 @@ public class Main {
 
         // Task-4
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        char[] fullName = new char[reverseFullName.length];
 
-        for (byte i = (byte) (reverseFullName.length - 1); i >= 0; i--) {
-            char currentChar = reverseFullName[i];
+        for (byte i = 0; i < reverseFullName.length; i++) {
+            char leftChar = reverseFullName[i];
+            char rightChar = reverseFullName[reverseFullName.length - i - 1];
 
-            fullName[reverseFullName.length - i - 1] = currentChar;
-            System.out.print(currentChar);
+            if (leftChar == rightChar) {
+                System.out.println(Arrays.toString(reverseFullName));
+                break;
+            }
+
+            reverseFullName[i] = rightChar;
+            reverseFullName[reverseFullName.length - i - 1] = leftChar;
         }
-
-        System.out.print("\n" + Arrays.toString(fullName));
     }
 }
