@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         // Task-1
@@ -28,7 +30,7 @@ public class Main {
         System.out.println("Минимальная сумма трат за неделю составила " + minWeeklyPaymentAmount + " рублей. Максимальная сумма трат за неделю составила " + maxWeeklyPaymentAmount + " рублей");
 
         // Task-3
-        float[] weeklyExpensePerMonth = {23_011, 16_005, 12_020, 11_000, 20_100, };
+        float[] weeklyExpensePerMonth = {23_011, 16_005, 12_020, 11_000, 20_100};
         float sumOfExpense = 0;
 
         for (float item : weeklyExpensePerMonth) {
@@ -38,5 +40,18 @@ public class Main {
         float averageAmountSpent = sumOfExpense / weeklyExpensePerMonth.length;
 
         System.out.println("Средняя сумма трат за месяц составила " + averageAmountSpent + " рублей");
+
+        // Task-4
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        char[] fullName = new char[reverseFullName.length];
+
+        for (byte i = (byte) (reverseFullName.length - 1); i >= 0; i--) {
+            char currentChar = reverseFullName[i];
+
+            fullName[reverseFullName.length - i - 1] = currentChar;
+            System.out.print(currentChar);
+        }
+
+        System.out.print("\n" + Arrays.toString(fullName));
     }
 }
