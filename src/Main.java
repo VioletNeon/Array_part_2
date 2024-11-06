@@ -43,12 +43,13 @@ public class Main {
 
         // Task-4
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        byte middleOfReverseFullNameArr = (byte) ((reverseFullName.length - 1) / 2);
 
         for (byte i = 0; i < reverseFullName.length; i++) {
             char leftChar = reverseFullName[i];
             char rightChar = reverseFullName[reverseFullName.length - i - 1];
 
-            if (leftChar == rightChar) {
+            if (i == middleOfReverseFullNameArr) {
                 System.out.println(Arrays.toString(reverseFullName));
                 break;
             }
