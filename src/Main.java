@@ -43,7 +43,7 @@ public class Main {
 
         // Task-4
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        byte middleOfReverseFullNameArr = (byte) ((reverseFullName.length - 1) / 2);
+        byte middleOfReverseFullNameArr = (byte) (reverseFullName.length / 2);
 
         for (byte i = 0; i < reverseFullName.length; i++) {
             char leftChar = reverseFullName[i];
